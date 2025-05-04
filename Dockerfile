@@ -8,4 +8,4 @@ RUN mvn clean package -DskipTests
 FROM eclipse-temurin:21
 WORKDIR /app
 COPY --from=build /app/target/furia-0.0.1-SNAPSHOT.jar app.jar
-ENTRYPOINT ["java", "-Xmx256m", "-Xms128m", "-jar", "app.jar"]
+ENTRYPOINT ["java", "-Xmx128m", "-Xms64m", "-jar", "app.jar"]
